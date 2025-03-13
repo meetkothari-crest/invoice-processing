@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<MasterDataCustomers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MasterDataCustomer>
+    <Name>Polychemtex Inc.</Name>
+    <CustomerNumber>730001</CustomerNumber>
+    <TaxRegistrationNumber>K9Y6VTJK8G</TaxRegistrationNumber>
+    <OrganizationNumber>K28TF62YM3</OrganizationNumber>
+    <CountryName>England</CountryName>
+    <PostalCode>DH9 OTB</PostalCode>
+    <State>Augustaburough</State>
+    <City>Townsville</City>
+    <Street>1 Main Street</Street>
+    <TelephoneNumber>496 0123</TelephoneNumber>
+    <FaxNumber>496 0124</FaxNumber>
+    <Blocked>false</Blocked>
+    <BypassVerification><Value>false</Value></BypassVerification>
+  </MasterDataCustomer>
+  <MasterDataCustomer>
+    <Name>Hills, Champlin and Trantow</Name>
+    <CustomerNumber>1bb6596259b14840874c5834822d352c</CustomerNumber>
+    <TaxRegistrationNumber>5RIAE2KBQP</TaxRegistrationNumber>
+    <OrganizationNumber>94U7P6GP7S</OrganizationNumber>
+    <CountryName>El Salvador</CountryName>
+    <PostalCode>16192</PostalCode>
+    <State>Ohio</State>
+    <City>Augustaburgh</City>
+    <Street>7829 Auer Run</Street>
+    <TelephoneNumber>(716)194-1937</TelephoneNumber>
+    <FaxNumber>(999)920-3661 x670</FaxNumber>
+    <Blocked>true</Blocked>
+    <BypassVerification><Value>false</Value></BypassVerification>
+  </MasterDataCustomer>
+  <MasterDataCustomer>
+    <Name>Reilly, Schinner and Hilll</Name>
+    <CustomerNumber>1714467a472041638446b7899f7fa9f4</CustomerNumber>
+    <TaxRegistrationNumber>8V34193UEE</TaxRegistrationNumber>
+    <OrganizationNumber>FU51T30X13</OrganizationNumber>
+    <CountryName>Korea</CountryName>
+    <PostalCode>45461-7100</PostalCode>
+    <State>Tennessee</State>
+    <City>Ursulaburgh</City>
+    <Street>982 Streich Pines</Street>
+    <TelephoneNumber>711-666-3267</TelephoneNumber>
+    <FaxNumber>(167)607-5696</FaxNumber>
+    <Blocked>false</Blocked>
+    <BypassVerification><Value>false</Value></BypassVerification>
+  </MasterDataCustomer>
+  <MasterDataCustomer>
+    <Name>Pfannerstill-Fay</Name>
+    <CustomerNumber>9267cf377d6b4d3ebb4b395cf706adb7</CustomerNumber>
+    <TaxRegistrationNumber>JH3SGQIBDJ</TaxRegistrationNumber>
+    <OrganizationNumber>ZM135JXOJF</OrganizationNumber>
+    <CountryName>Malta</CountryName>
+    <PostalCode>14520</PostalCode>
+    <State>Nevada</State>
+    <City>New Viviannebury</City>
+    <Street>06054 Laverna Estates</Street>
+    <TelephoneNumber>(083)047-4334</TelephoneNumber>
+    <FaxNumber>1-545-286-6165 x1045</FaxNumber>
+    <Blocked>false</Blocked>
+    <BypassVerification><Value>false</Value></BypassVerification>
+  </MasterDataCustomer>
+  <MasterDataCustomer>
+    <Name>Kris Group</Name>
+    <CustomerNumber>69f2f2a1e94f411f81b1377a342fa4d8</CustomerNumber>
+    <TaxRegistrationNumber>8Z7MKP82NW</TaxRegistrationNumber>
+    <OrganizationNumber>FTXDJ01KXL</OrganizationNumber>
+    <CountryName>San Marino</CountryName>
+    <PostalCode>26797</PostalCode>
+    <State>Washington</State>
+    <City>Lake Maryjane</City>
+    <Street>7135 Johnston Isle</Street>
+    <TelephoneNumber>368-850-5515 x1983</TelephoneNumber>
+    <FaxNumber>1-269-953-9020 x109</FaxNumber>
+    <Blocked>true</Blocked>
+    <BypassVerification><Value>false</Value></BypassVerification>
+  </MasterDataCustomer>
+</MasterDataCustomers>

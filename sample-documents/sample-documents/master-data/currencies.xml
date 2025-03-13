@@ -1,0 +1,32 @@
+<Currencies xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Currency>
+    <Code>EUR</Code>
+    <Name>Euro</Name>
+    <Active>true</Active>
+  </Currency>
+  <Currency>
+    <Code>USD</Code>
+    <Name>US Dollar</Name>
+    <Active>true</Active>
+  </Currency>
+  <Currency>
+    <Code>SEK</Code>
+    <Name>Swedish Crown</Name>
+    <Active>true</Active>
+  </Currency>
+  <Currency>
+    <Code>GBP</Code>
+    <Name>Great Britain Pound</Name>
+    <Active>true</Active>
+  </Currency>
+  <Currency>
+    <Code>AUD</Code>
+    <Name>Australian Dollar</Name>
+    <Active>true</Active>
+  </Currency>
+  <Currency>
+    <Code>CHF</Code>
+    <Name>Swiss Franc</Name>
+    <Active>true</Active>
+  </Currency>
+</Currencies>

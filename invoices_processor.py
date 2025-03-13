@@ -11,6 +11,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from mypy_boto3_bedrock_runtime.client import BedrockRuntimeClient
 from mypy_boto3_s3.client import S3Client
+import random
+import botocore.exceptions
 
 # Load configuration from YAML file
 def load_config():
@@ -36,54 +38,109 @@ def initialize_aws_clients() -> Tuple[S3Client, BedrockRuntimeClient]:
                      region_name=CONFIG['aws']['region_name'])
     )
 
+# def retrieve_and_generate(bedrock_client: BedrockRuntimeClient, input_prompt: str, document_s3_uri: str) -> Dict[str, Any]:
+#     """
+#     Use AWS Bedrock to retrieve and generate invoice data based on the provided prompt and S3 document URI.
+    
+#     Args:
+#         bedrock_client (BedrockRuntimeClient): AWS Bedrock client
+#         input_prompt (str): Prompt for the AI model
+#         document_s3_uri (str): S3 URI of the invoice document
+    
+#     Returns:
+#         Dict[str, Any]: Generated data from Bedrock
+#     """
+#     model_arn = f'arn:aws:bedrock:{CONFIG["aws"]["region_name"]}::foundation-model/{CONFIG["aws"]["model_id"]}'
+#     return bedrock_client.retrieve_and_generate(
+#         input={'text': input_prompt},
+#         retrieveAndGenerateConfiguration={
+#             'type': 'EXTERNAL_SOURCES',
+#             'externalSourcesConfiguration': {
+#                 'modelArn': model_arn,
+#                 'sources': [
+#                     {
+#                         "sourceType": "S3",
+#                         "s3Location": {"uri": document_s3_uri}
+#                     }
+#                 ]
+#             }
+#         }
+#     )
+
 def retrieve_and_generate(bedrock_client: BedrockRuntimeClient, input_prompt: str, document_s3_uri: str) -> Dict[str, Any]:
     """
-    Use AWS Bedrock to retrieve and generate invoice data based on the provided prompt and S3 document URI.
-    
-    Args:
-        bedrock_client (BedrockRuntimeClient): AWS Bedrock client
-        input_prompt (str): Prompt for the AI model
-        document_s3_uri (str): S3 URI of the invoice document
-    
-    Returns:
-        Dict[str, Any]: Generated data from Bedrock
+    Use AWS Bedrock to retrieve and generate invoice data with retry logic to handle throttling.
     """
     model_arn = f'arn:aws:bedrock:{CONFIG["aws"]["region_name"]}::foundation-model/{CONFIG["aws"]["model_id"]}'
-    return bedrock_client.retrieve_and_generate(
-        input={'text': input_prompt},
-        retrieveAndGenerateConfiguration={
-            'type': 'EXTERNAL_SOURCES',
-            'externalSourcesConfiguration': {
-                'modelArn': model_arn,
-                'sources': [
-                    {
-                        "sourceType": "S3",
-                        "s3Location": {"uri": document_s3_uri}
+
+    max_retries = 10  # Number of retry attempts
+    base_delay = 2  # Initial delay in seconds
+
+    for attempt in range(max_retries):
+        try:
+            return bedrock_client.retrieve_and_generate(
+                input={'text': input_prompt},
+                retrieveAndGenerateConfiguration={
+                    'type': 'EXTERNAL_SOURCES',
+                    'externalSourcesConfiguration': {
+                        'modelArn': model_arn,
+                        'sources': [
+                            {"sourceType": "S3", "s3Location": {"uri": document_s3_uri}}
+                        ]
                     }
-                ]
-            }
-        }
-    )
+                }
+            )
+        except botocore.exceptions.ClientError as e:
+            if e.response['Error']['Code'] == 'ThrottlingException':
+                wait_time = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                print(f"Throttling detected. Retrying in {wait_time:.2f} seconds...")
+                time.sleep(wait_time)
+            else:
+                raise e  # Raise non-throttling errors immediately
+
+    raise Exception("Max retries exceeded for RetrieveAndGenerate")
+
+# def process_invoice(s3_client: S3Client, bedrock_client: BedrockRuntimeClient, bucket_name: str, pdf_file_key: str) -> Dict[str, str]:
+#     """
+#     Process a single invoice by downloading it from S3 and using Bedrock to analyze it.
+    
+#     Args:
+#         s3_client (S3Client): AWS S3 client
+#         bedrock_client (BedrockRuntimeClient): AWS Bedrock client
+#         bucket_name (str): Name of the S3 bucket
+#         pdf_file_key (str): S3 key of the PDF invoice
+    
+#     Returns:
+#         Dict[str, Any]: Processed invoice data
+#     """
+#     document_uri = f"s3://{bucket_name}/{pdf_file_key}"
+#     local_file_path = os.path.join(CONFIG['processing']['local_download_folder'], pdf_file_key)
+
+#     # Ensure the local directory exists and download the invoice from S3
+#     os.makedirs(os.path.dirname(local_file_path), exist_ok=True)
+#     s3_client.download_file(bucket_name, pdf_file_key, local_file_path)
+
+#     # Process invoice with different prompts
+#     results = {}
+#     for prompt_name in ["full", "structured", "summary"]:
+#         response = retrieve_and_generate(bedrock_client, CONFIG['aws']['prompts'][prompt_name], document_uri)
+#         results[prompt_name] = response['output']['text']
+
+#     return results
 
 def process_invoice(s3_client: S3Client, bedrock_client: BedrockRuntimeClient, bucket_name: str, pdf_file_key: str) -> Dict[str, str]:
     """
     Process a single invoice by downloading it from S3 and using Bedrock to analyze it.
-    
-    Args:
-        s3_client (S3Client): AWS S3 client
-        bedrock_client (BedrockRuntimeClient): AWS Bedrock client
-        bucket_name (str): Name of the S3 bucket
-        pdf_file_key (str): S3 key of the PDF invoice
-    
-    Returns:
-        Dict[str, Any]: Processed invoice data
     """
     document_uri = f"s3://{bucket_name}/{pdf_file_key}"
     local_file_path = os.path.join(CONFIG['processing']['local_download_folder'], pdf_file_key)
 
-    # Ensure the local directory exists and download the invoice from S3
+    # Ensure local directory exists and download the invoice
     os.makedirs(os.path.dirname(local_file_path), exist_ok=True)
     s3_client.download_file(bucket_name, pdf_file_key, local_file_path)
+
+    # Introduce a small delay to prevent rapid consecutive requests
+    time.sleep(5)
 
     # Process invoice with different prompts
     results = {}
@@ -115,26 +172,127 @@ def write_to_json_file(output_file: str, data: Dict[str, Any]):
         with open(output_file, 'w') as file:
             json.dump(existing_data, file, indent=4)
 
+# def batch_process_s3_bucket_invoices(s3_client: S3Client, bedrock_client: BedrockRuntimeClient, bucket_name: str, prefix: str = "") -> int:
+#     """
+#     Batch process all invoices in an S3 bucket or a specific prefix within the bucket.
+    
+#     Args:
+#         s3_client (S3Client): AWS S3 client
+#         bedrock_client (BedrockRuntimeClient): AWS Bedrock client
+#         bucket_name (str): Name of the S3 bucket
+#         prefix (str, optional): S3 prefix to filter invoices. Defaults to "".
+    
+#     Returns:
+#         int: Number of processed invoices
+#     """
+#     # Clear and recreate local download folder
+#     shutil.rmtree(CONFIG['processing']['local_download_folder'], ignore_errors=True)
+#     os.makedirs(CONFIG['processing']['local_download_folder'], exist_ok=True)
+
+#     # Prepare to iterate through all objects in the S3 bucket
+#     continuation_token = None  # Pagination handling
+#     pdf_file_keys = []
+
+#     while True:
+#         list_kwargs = {'Bucket': bucket_name, 'Prefix': prefix}
+#         if continuation_token:
+#             list_kwargs['ContinuationToken'] = continuation_token
+
+#         response = s3_client.list_objects_v2(**list_kwargs)
+
+#         for obj in response.get('Contents', []):
+#             pdf_file_key = obj['Key']
+#             if pdf_file_key.lower().endswith('.pdf'):  # Skip folders or non-PDF files
+#                 pdf_file_keys.append(pdf_file_key)
+
+#         if not response.get('IsTruncated'):
+#             break
+#         continuation_token = response.get('NextContinuationToken')
+
+#     # Process invoices in parallel
+#     processed_count = 0
+#     with ThreadPoolExecutor() as executor:
+#         future_to_key = {
+#             executor.submit(process_invoice, s3_client, bedrock_client, bucket_name, pdf_file_key): pdf_file_key
+#             for pdf_file_key in pdf_file_keys
+#         }
+
+#         for future in as_completed(future_to_key):
+#             pdf_file_key = future_to_key[future]
+#             try:
+#                 result = future.result()
+#                 # Write result to the JSON output file as soon as it's available
+#                 write_to_json_file(CONFIG['processing']['output_file'], {pdf_file_key: result})
+#                 processed_count += 1
+#                 print(f"Processed file: s3://{bucket_name}/{pdf_file_key}")
+#             except Exception as e:
+#                 print(f"Failed to process s3://{bucket_name}/{pdf_file_key}: {str(e)}")
+
+#     return processed_count
+
+
+
+
+# def batch_process_s3_bucket_invoices(s3_client: S3Client, bedrock_client: BedrockRuntimeClient, bucket_name: str, prefix: str = "") -> int:
+#     """
+#     Batch process all invoices in an S3 bucket while avoiding throttling.
+#     """
+#     # Clear and recreate local download folder
+#     shutil.rmtree(CONFIG['processing']['local_download_folder'], ignore_errors=True)
+#     os.makedirs(CONFIG['processing']['local_download_folder'], exist_ok=True)
+
+#     # List PDF files in the S3 bucket
+#     pdf_file_keys = []
+#     continuation_token = None
+
+#     while True:
+#         list_kwargs = {'Bucket': bucket_name, 'Prefix': prefix}
+#         if continuation_token:
+#             list_kwargs['ContinuationToken'] = continuation_token
+
+#         response = s3_client.list_objects_v2(**list_kwargs)
+
+#         for obj in response.get('Contents', []):
+#             if obj['Key'].lower().endswith('.pdf'):
+#                 pdf_file_keys.append(obj['Key'])
+
+#         if not response.get('IsTruncated'):
+#             break
+#         continuation_token = response.get('NextContinuationToken')
+
+#     # Process invoices with limited parallelism
+#     processed_count = 0
+#     max_workers = 2  # 🔥 Reduce concurrency to avoid throttling
+
+#     with ThreadPoolExecutor(max_workers=max_workers) as executor:
+#         future_to_key = {
+#             executor.submit(process_invoice, s3_client, bedrock_client, bucket_name, pdf_file_key): pdf_file_key
+#             for pdf_file_key in pdf_file_keys
+#         }
+
+#         for future in as_completed(future_to_key):
+#             pdf_file_key = future_to_key[future]
+#             try:
+#                 result = future.result()
+#                 write_to_json_file(CONFIG['processing']['output_file'], {pdf_file_key: result})
+#                 processed_count += 1
+#                 print(f"Processed file: s3://{bucket_name}/{pdf_file_key}")
+#             except Exception as e:
+#                 print(f"Failed to process s3://{bucket_name}/{pdf_file_key}: {str(e)}")
+
+#     return processed_count
+
 def batch_process_s3_bucket_invoices(s3_client: S3Client, bedrock_client: BedrockRuntimeClient, bucket_name: str, prefix: str = "") -> int:
     """
-    Batch process all invoices in an S3 bucket or a specific prefix within the bucket.
-    
-    Args:
-        s3_client (S3Client): AWS S3 client
-        bedrock_client (BedrockRuntimeClient): AWS Bedrock client
-        bucket_name (str): Name of the S3 bucket
-        prefix (str, optional): S3 prefix to filter invoices. Defaults to "".
-    
-    Returns:
-        int: Number of processed invoices
+    Batch process all invoices in an S3 bucket sequentially to avoid throttling.
     """
     # Clear and recreate local download folder
     shutil.rmtree(CONFIG['processing']['local_download_folder'], ignore_errors=True)
     os.makedirs(CONFIG['processing']['local_download_folder'], exist_ok=True)
 
-    # Prepare to iterate through all objects in the S3 bucket
-    continuation_token = None  # Pagination handling
+    # List PDF files in the S3 bucket
     pdf_file_keys = []
+    continuation_token = None
 
     while True:
         list_kwargs = {'Bucket': bucket_name, 'Prefix': prefix}
@@ -144,34 +302,31 @@ def batch_process_s3_bucket_invoices(s3_client: S3Client, bedrock_client: Bedroc
         response = s3_client.list_objects_v2(**list_kwargs)
 
         for obj in response.get('Contents', []):
-            pdf_file_key = obj['Key']
-            if pdf_file_key.lower().endswith('.pdf'):  # Skip folders or non-PDF files
-                pdf_file_keys.append(pdf_file_key)
+            if obj['Key'].lower().endswith('.pdf'):
+                pdf_file_keys.append(obj['Key'])
 
         if not response.get('IsTruncated'):
             break
         continuation_token = response.get('NextContinuationToken')
 
-    # Process invoices in parallel
+    # Process invoices **one by one** to prevent throttling
     processed_count = 0
-    with ThreadPoolExecutor() as executor:
-        future_to_key = {
-            executor.submit(process_invoice, s3_client, bedrock_client, bucket_name, pdf_file_key): pdf_file_key
-            for pdf_file_key in pdf_file_keys
-        }
 
-        for future in as_completed(future_to_key):
-            pdf_file_key = future_to_key[future]
-            try:
-                result = future.result()
-                # Write result to the JSON output file as soon as it's available
-                write_to_json_file(CONFIG['processing']['output_file'], {pdf_file_key: result})
-                processed_count += 1
-                print(f"Processed file: s3://{bucket_name}/{pdf_file_key}")
-            except Exception as e:
-                print(f"Failed to process s3://{bucket_name}/{pdf_file_key}: {str(e)}")
+    for pdf_file_key in pdf_file_keys:
+        try:
+            result = process_invoice(s3_client, bedrock_client, bucket_name, pdf_file_key)
+            write_to_json_file(CONFIG['processing']['output_file'], {pdf_file_key: result})
+            processed_count += 1
+            print(f"Processed file: s3://{bucket_name}/{pdf_file_key}")
+
+            # **Add delay to prevent throttling**
+            time.sleep(5)  # Adjust this delay if needed
+        except Exception as e:
+            print(f"Failed to process s3://{bucket_name}/{pdf_file_key}: {str(e)}")
 
     return processed_count
+
+
 
 def main():
     """

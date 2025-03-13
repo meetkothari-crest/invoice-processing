@@ -1,0 +1,32 @@
+<MasterDataObjects xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <MasterDataObject>
+    <Value>001</Value>
+    <Name>Project One</Name>
+    <Description>This is a description of Project One</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+  <MasterDataObject>
+    <Value>002</Value>
+    <Name>Project Two</Name>
+    <Description>This is a description of Project Two</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+  <MasterDataObject>
+    <Value>003</Value>
+    <Name>Project Three</Name>
+    <Description>This is a description of Project Three</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+<MasterDataObject>
+    <Value>004</Value>
+    <Name>Project Four</Name>
+    <Description>This is a description of Project Four</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+<MasterDataObject>
+    <Value>005</Value>
+    <Name>Project Five</Name>
+    <Description>This is a description of Project Five</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+</MasterDataObjects>

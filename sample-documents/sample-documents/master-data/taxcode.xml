@@ -1,0 +1,26 @@
+<MasterDataObjects xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <MasterDataObject>
+    <Value>1</Value>
+    <Name>Project One</Name>
+    <Description>This is a description of tax code one</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+  <MasterDataObject>
+    <Value>2</Value>
+    <Name>Project Two</Name>
+    <Description>This is a description of tax code two</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+  <MasterDataObject>
+    <Value>3</Value>
+    <Name>Project Three</Name>
+    <Description>This is a description of tax code three</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+  <MasterDataObject>
+    <Value>012345</Value>
+    <Name>Demo Tax Code</Name>
+    <Description>This is a description of a some tax code</Description>
+    <Active>true</Active>
+  </MasterDataObject>
+</MasterDataObjects>

@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Suppliers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Supplier>
+    <SupplierNumber>00001</SupplierNumber>
+    <Name>Polychemtex Inc.</Name>
+    <Description>Supplier of quality goods and services at low prices.</Description>
+    <TaxRegistrationNumber>GB999999973</TaxRegistrationNumber>
+    <OrganizationNumber>5561947986</OrganizationNumber>
+    <Street>1 Main Street</Street>
+    <PostalCode>DH9OTB</PostalCode>
+    <City>Townsville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+    <TaxCode>012345</TaxCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>00002</SupplierNumber>
+    <Name>Anconia Corp</Name>
+    <Description>OMP supplier.</Description>
+    <TaxRegistrationNumber>GB339072747</TaxRegistrationNumber>
+    <OrganizationNumber>4795135872</OrganizationNumber>
+    <Street>18144 Baldwin Way</Street>
+    <PostalCode>S66 3XH</PostalCode>
+    <City>Sunnyvale</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Bankgiro</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>00003</SupplierNumber>
+    <Name>Profile Construction</Name>
+    <Description>A blocked supplier. This supplier is blocked until further notice</Description>
+    <TaxRegistrationNumber>GB000000000</TaxRegistrationNumber>
+    <OrganizationNumber>01235489701</OrganizationNumber>
+    <Street>1776 Liberty Way</Street>
+    <PostalCode>S66 3XH</PostalCode>
+    <City>Sunnyvale</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Bankgiro</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+    <Blocked>1</Blocked>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>CN-001</SupplierNumber>
+    <Name>Contoso Asia</Name>
+    <Description>AV supplier.</Description>
+    <TaxRegistrationNumber>CN213444466</TaxRegistrationNumber>
+    <OrganizationNumber>6005218080</OrganizationNumber>
+    <Street>123 Xia Street</Street>
+    <PostalCode>100027</PostalCode>
+    <City>Beijing</City>
+    <CountryName>China</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Wire</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+<Supplier>
+	<SupplierNumber>00005</SupplierNumber>
+    <Name>Billgore Devices</Name>
+    <Description>Supplier of quality goods and services at premium prices.</Description>
+    <TaxRegistrationNumber></TaxRegistrationNumber>
+    <OrganizationNumber></OrganizationNumber>
+    <Street>Rue du Lac 1268</Street>
+    <PostalCode>2501</PostalCode>
+    <City>Biel</City>
+    <CountryName>CH</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+    <TaxCode>012345</TaxCode>
+</Supplier>
+<Supplier>
+	<SupplierNumber>00006</SupplierNumber>
+    <Name>Cloud VPS</Name>
+    <Description>VPS services</Description>
+    <TaxRegistrationNumber>EU123456789</TaxRegistrationNumber>
+    <OrganizationNumber></OrganizationNumber>
+    <Street>35997 Better st</Street>
+    <PostalCode>66102</PostalCode>
+    <City>Kansas City</City>
+    <CountryName>US</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+    <TaxCode>012345</TaxCode>
+</Supplier>  <Supplier>
+    <SupplierNumber>05</SupplierNumber>
+    <Name>Kriojomo Nioffeiu Company</Name>
+    <Description>A quality supplier of coil-over kits.</Description>
+    <TaxRegistrationNumber>GB337040413</TaxRegistrationNumber>
+    <OrganizationNumber>715734681</OrganizationNumber>
+    <Street>54 Some Street</Street>
+    <PostalCode>DH2442</PostalCode>
+    <City>Humbleton</City>
+    <CountryName>USA</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>06</SupplierNumber>
+    <Name>Sottot Treebraono Limited</Name>
+    <Description>A quality supplier of tires.</Description>
+    <TaxRegistrationNumber>GB599432247</TaxRegistrationNumber>
+    <OrganizationNumber>9335381724</OrganizationNumber>
+    <Street>18 Some Street</Street>
+    <PostalCode>DH24410</PostalCode>
+    <City>Waverly Hills</City>
+    <CountryName>USA</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>07</SupplierNumber>
+    <Name>Oissyeau Eoofloo LLP</Name>
+    <Description>A quality supplier of candy.</Description>
+    <TaxRegistrationNumber>GB376251257</TaxRegistrationNumber>
+    <OrganizationNumber>9134090806</OrganizationNumber>
+    <Street>97 Some Street</Street>
+    <PostalCode>DH2448</PostalCode>
+    <City>Waverly Hills</City>
+    <CountryName>USA</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>08</SupplierNumber>
+    <Name>Houbbixf Chorlooei Inc.</Name>
+    <Description>A quality supplier of packaging material.</Description>
+    <TaxRegistrationNumber>GB734385478</TaxRegistrationNumber>
+    <OrganizationNumber>1000443259</OrganizationNumber>
+    <Street>27 Some Street</Street>
+    <PostalCode>DH2441</PostalCode>
+    <City>Barnacle Bay</City>
+    <CountryName>USA</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>09</SupplierNumber>
+    <Name>Uecrooo Quaghooo Co.</Name>
+    <Description>A quality supplier of pants.</Description>
+    <TaxRegistrationNumber>GB851287289</TaxRegistrationNumber>
+    <OrganizationNumber>6562348165</OrganizationNumber>
+    <Street>68 Some Street</Street>
+    <PostalCode>DH2447</PostalCode>
+    <City>Barnacle Bay</City>
+    <CountryName>USA</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>10</SupplierNumber>
+    <Name>Sutino Quurfogym Co.</Name>
+    <Description>A quality supplier of air filters.</Description>
+    <TaxRegistrationNumber>GB6000468</TaxRegistrationNumber>
+    <OrganizationNumber>8775361396</OrganizationNumber>
+    <Street>57 Some Street</Street>
+    <PostalCode>DH2441</PostalCode>
+    <City>Capital City</City>
+    <CountryName>USA</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>USD</CurrencyCode>
+  </Supplier>
+</Suppliers>

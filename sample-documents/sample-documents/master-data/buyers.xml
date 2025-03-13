@@ -1,0 +1,48 @@
+<Buyers xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Buyer>
+		<Name>Buyer 1</Name>
+		<ExternalId>5031151003777</ExternalId>
+		<VatNumber /> 
+		<AddressCountry>United Kingdom</AddressCountry>
+		<AddressStreetAddress>44 Shore St</AddressStreetAddress>
+		<AddressPostcode>AB4 1TX</AddressPostcode>
+		<AddressCity>Macduff</AddressCity>
+		<PhoneNumber>01207 555-5512</PhoneNumber>
+		<Fax />
+		<AlternativeName1>ACME</AlternativeName1>
+		<AlternativeName2>ACME Inc</AlternativeName2>
+		<AlternativeName3></AlternativeName3>
+		<OrganizationNumber i:nil="true" />
+	</Buyer>
+	<Buyer>
+		<Name>Buyer 2</Name>
+		<ExternalId>5031151003789</ExternalId>
+		<VatNumber />
+		<AddressCountry>United Kingdom</AddressCountry>
+		<AddressStreetAddress>14 Westfield Rd</AddressStreetAddress>
+		<AddressPostcode>NE33 1DP</AddressPostcode>
+		<AddressCity>Newjack</AddressCity>
+		<PhoneNumber />
+		<Fax />
+		<AlternativeName1></AlternativeName1>
+		<AlternativeName2></AlternativeName2>
+		<AlternativeName3 i:nil="true" />
+		<OrganizationNumber i:nil="true" />
+	</Buyer>
+	<Buyer>
+		<Name>Buyer 3</Name>
+		<ExternalId>5031151003798</ExternalId>
+		<VatNumber />
+		<AddressCountry>United Kingdom</AddressCountry>
+		<AddressStreetAddress>1 Whitley Bay St</AddressStreetAddress>
+		<AddressPostcode>NE26 2SS</AddressPostcode>
+		<AddressCity>North Bay</AddressCity>
+		<PhoneNumber />
+		<Fax />
+		<AlternativeName1></AlternativeName1>
+		<AlternativeName2></AlternativeName2>
+		<AlternativeName3></AlternativeName3>
+		<OrganizationNumber i:nil="true" />
+	</Buyer>
+</Buyers>
+

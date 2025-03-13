@@ -1,0 +1,23 @@
+<GeneralLedgerAccounts xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <GeneralLedgerAccount>
+    <Code>123</Code>
+    <Name>Account 123</Name>
+    <Group>Group 1</Group>
+    <Description>Purchases for account 123</Description>
+    <Active>true</Active>
+  </GeneralLedgerAccount>
+  <GeneralLedgerAccount>
+    <Code>456</Code>
+    <Name>Account 456</Name>
+    <Group>Group 2</Group>
+    <Description>Purchases for account 456</Description>
+    <Active>true</Active>
+  </GeneralLedgerAccount>
+  <GeneralLedgerAccount>
+    <Code>789</Code>
+    <Name>Account 789</Name>
+    <Group>Group 3</Group>
+    <Description>Purchases for account 789</Description>
+    <Active>true</Active>
+  </GeneralLedgerAccount>
+</GeneralLedgerAccounts>

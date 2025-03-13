@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<Suppliers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Supplier>
+    <SupplierNumber>00001</SupplierNumber>
+    <Name>Polychemtex Inc.</Name>
+    <Description>Supplier of quality goods and services at low prices.</Description>
+    <TaxRegistrationNumber>GB999999973</TaxRegistrationNumber>
+    <OrganizationNumber>5561947986</OrganizationNumber>
+    <Street>1 Main Street</Street>
+    <PostalCode>DH9OTB</PostalCode>
+    <City>Townsville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+    <TaxCode>012345</TaxCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>00002</SupplierNumber>
+    <Name>Anconia Corp</Name>
+    <Description>OMP supplier.</Description>
+    <TaxRegistrationNumber>GB339072747</TaxRegistrationNumber>
+    <OrganizationNumber>4795135872</OrganizationNumber>
+    <Street>18144 Baldwin Way</Street>
+    <PostalCode>S66 3XH</PostalCode>
+    <City>Sunnyvale</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Bankgiro</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>00003</SupplierNumber>
+    <Name>Profile Construction</Name>
+    <Description>A blocked supplier. This supplier is blocked until further notice</Description>
+    <TaxRegistrationNumber>GB000000000</TaxRegistrationNumber>
+    <OrganizationNumber>01235489701</OrganizationNumber>
+    <Street>1776 Liberty Way</Street>
+    <PostalCode>S66 3XH</PostalCode>
+    <City>Sunnyvale</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Bankgiro</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+    <Blocked>1</Blocked>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>CN-001</SupplierNumber>
+    <Name>Contoso Asia</Name>
+    <Description>AV supplier.</Description>
+    <TaxRegistrationNumber>CN213444466</TaxRegistrationNumber>
+    <OrganizationNumber>6005218080</OrganizationNumber>
+    <Street>123 Xia Street</Street>
+    <PostalCode>100027</PostalCode>
+    <City>Beijing</City>
+    <CountryName>China</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Wire</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+<Supplier>
+	<SupplierNumber>00005</SupplierNumber>
+    <Name>Billgore Devices</Name>
+    <Description>Supplier of quality goods and services at premium prices.</Description>
+    <TaxRegistrationNumber></TaxRegistrationNumber>
+    <OrganizationNumber></OrganizationNumber>
+    <Street>Rue du Lac 1268</Street>
+    <PostalCode>2501</PostalCode>
+    <City>Biel</City>
+    <CountryName>CH</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+    <TaxCode>012345</TaxCode>
+</Supplier>
+<Supplier>
+	<SupplierNumber>00006</SupplierNumber>
+    <Name>Cloud VPS</Name>
+    <Description>VPS services</Description>
+    <TaxRegistrationNumber>EU123456789</TaxRegistrationNumber>
+    <OrganizationNumber></OrganizationNumber>
+    <Street>35997 Better st</Street>
+    <PostalCode>66102</PostalCode>
+    <City>Kansas City</City>
+    <CountryName>US</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+    <TaxCode>012345</TaxCode>
+</Supplier>  <Supplier>
+    <SupplierNumber>05</SupplierNumber>
+    <Name>Toocksoo Spucsoxobo Co.</Name>
+    <Description>A quality supplier of pants.</Description>
+    <TaxRegistrationNumber>GB594286449</TaxRegistrationNumber>
+    <OrganizationNumber>5851951155</OrganizationNumber>
+    <Street>11 Some Street</Street>
+    <PostalCode>DH2443</PostalCode>
+    <City>Ogdenville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>06</SupplierNumber>
+    <Name>Poglou Iiolroso LLC</Name>
+    <Description>A quality supplier of coil-over kits.</Description>
+    <TaxRegistrationNumber>GB495495348</TaxRegistrationNumber>
+    <OrganizationNumber>699278901</OrganizationNumber>
+    <Street>73 Some Street</Street>
+    <PostalCode>DH2441</PostalCode>
+    <City>Ogdenville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>07</SupplierNumber>
+    <Name>Spiozzoxoi Buckeot Limited</Name>
+    <Description>A quality supplier of pants.</Description>
+    <TaxRegistrationNumber>GB794710252</TaxRegistrationNumber>
+    <OrganizationNumber>7249967768</OrganizationNumber>
+    <Street>66 Some Street</Street>
+    <PostalCode>DH2447</PostalCode>
+    <City>Townsville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>08</SupplierNumber>
+    <Name>Banoe Spezziao Inc.</Name>
+    <Description>A quality supplier of office supplies.</Description>
+    <TaxRegistrationNumber>GB630280256</TaxRegistrationNumber>
+    <OrganizationNumber>3774808379</OrganizationNumber>
+    <Street>74 Some Street</Street>
+    <PostalCode>DH2441</PostalCode>
+    <City>Capital City</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>09</SupplierNumber>
+    <Name>Piproe Mereoio Limited</Name>
+    <Description>A quality supplier of office furniture.</Description>
+    <TaxRegistrationNumber>GB788570224</TaxRegistrationNumber>
+    <OrganizationNumber>3814661944</OrganizationNumber>
+    <Street>12 Some Street</Street>
+    <PostalCode>DH2441</PostalCode>
+    <City>Ogdenville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+  <Supplier>
+    <SupplierNumber>10</SupplierNumber>
+    <Name>Zoyrsoxaa Reaggooe Co.</Name>
+    <Description>A quality supplier of post-it notes.</Description>
+    <TaxRegistrationNumber>GB785333940</TaxRegistrationNumber>
+    <OrganizationNumber>7809554479</OrganizationNumber>
+    <Street>42 Some Street</Street>
+    <PostalCode>DH2446</PostalCode>
+    <City>Townsville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+    <Supplier>
+    <SupplierNumber>11</SupplierNumber>
+    <Name>Öster Co.</Name>
+    <Description>A quality supplier of post-it notes.</Description>
+    <TaxRegistrationNumber>GB785333940</TaxRegistrationNumber>
+    <OrganizationNumber>7809554479</OrganizationNumber>
+    <Street>42 Some Street</Street>
+    <PostalCode>DH2446</PostalCode>
+    <City>Townsville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+    <Supplier>
+    <SupplierNumber>12</SupplierNumber>
+    <Name>Øster Co.</Name>
+    <Description>A quality supplier of post-it notes.</Description>
+    <TaxRegistrationNumber>GB785333940</TaxRegistrationNumber>
+    <OrganizationNumber>7809554479</OrganizationNumber>
+    <Street>42 Some Street</Street>
+    <PostalCode>DH2446</PostalCode>
+    <City>Townsville</City>
+    <CountryName>UK</CountryName>
+    <PaymentTerm>30 Days</PaymentTerm>
+    <PaymentMethod>Direct Deposit</PaymentMethod>
+    <CurrencyCode>GBP</CurrencyCode>
+  </Supplier>
+</Suppliers>

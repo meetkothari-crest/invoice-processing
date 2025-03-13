@@ -1,0 +1,19 @@
+<SupplierBankAccounts xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+
+  <SupplierBankAccount>
+    <BankName>Swedbank</BankName>
+    <SupplierNumber>1</SupplierNumber>
+    <BankNumberType>bic</BankNumberType>
+    <BankNumber>1234567</BankNumber>
+    <AccountNumberType>plusgiro</AccountNumberType>
+    <AccountNumber>123456</AccountNumber>
+  </SupplierBankAccount>
+  <SupplierBankAccount>
+    <BankName>Handelsbanken</BankName>
+    <SupplierNumber>51003</SupplierNumber>
+    <BankNumberType>bic</BankNumberType>
+    <BankNumber>7654321</BankNumber>
+    <AccountNumberType>bankgiro</AccountNumberType>
+    <AccountNumber>654321</AccountNumber>
+  </SupplierBankAccount>
+</SupplierBankAccounts>

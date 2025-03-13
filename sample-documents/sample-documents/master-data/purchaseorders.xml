@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PurchaseOrders xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<PurchaseOrder>
+		<OrderNumber>000006</OrderNumber>
+		<SupplierNumber>CN-001</SupplierNumber>
+		<CurrencyCode>USD</CurrencyCode>
+		<DateCreated>2022-04-28T22:29:53</DateCreated>
+		<ContactName>Carl Carlson</ContactName>
+		<Description>Some text</Description>
+		<StatusText>Received</StatusText>
+		<Lines>
+			<PurchaseOrderLine>
+				<OrderLineNumber>1</OrderLineNumber>
+				<ArticleNumber>12345</ArticleNumber>
+				<SupplierArticleNumber>COAS222333</SupplierArticleNumber>
+				<ArticleDescription>SpeakerCable Speaker cable 10</ArticleDescription>
+				<CategoryNumber>CAT1000</CategoryNumber>
+				<CategoryDescription>Speakers and stuff</CategoryDescription>
+				<Quantity>650.0</Quantity>
+				<Unit>ea</Unit>
+				<UnitPrice>300.0</UnitPrice>
+				<RowTotalAmountVatExcluded>195000.0</RowTotalAmountVatExcluded>
+				<StatusText>Received</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>650.0</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+			<PurchaseOrderLine>
+				<OrderLineNumber>2</OrderLineNumber>
+				<ArticleNumber>55551</ArticleNumber>
+				<SupplierArticleNumber/>
+				<ArticleDescription>SurroundSoundReceive</ArticleDescription>
+				<CategoryNumber/>
+				<CategoryDescription/>
+				<Quantity>450.0</Quantity>
+				<Unit>ea</Unit>
+				<UnitPrice>320.0</UnitPrice>
+				<RowTotalAmountVatExcluded>144000.0</RowTotalAmountVatExcluded>
+				<StatusText>Received</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>450.0</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+			<PurchaseOrderLine>
+				<OrderLineNumber>3</OrderLineNumber>
+				<ArticleNumber>12333</ArticleNumber>
+				<SupplierArticleNumber/>
+				<ArticleDescription>TelevisionM12037 Television M120 37 Silver</ArticleDescription>
+				<CategoryNumber>CAT1000</CategoryNumber>
+				<CategoryDescription>Speakers and stuff</CategoryDescription>
+				<Quantity>625.0</Quantity>
+				<Unit>ea</Unit>
+				<UnitPrice>160.0</UnitPrice>
+				<RowTotalAmountVatExcluded>100000.0</RowTotalAmountVatExcluded>
+				<StatusText>Received</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>625.0</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+			<PurchaseOrderLine>
+				<OrderLineNumber>4</OrderLineNumber>
+				<ArticleNumber>22333</ArticleNumber>
+				<SupplierArticleNumber/>
+				<ArticleDescription>Soundbar</ArticleDescription>
+				<CategoryNumber>CAT1000</CategoryNumber>
+				<CategoryDescription>Speakers and stuff</CategoryDescription>
+				<Quantity>350.0</Quantity>
+				<Unit>ea</Unit>
+				<UnitPrice>120.0</UnitPrice>
+				<RowTotalAmountVatExcluded>42000.0</RowTotalAmountVatExcluded>
+				<StatusText>Received</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>450.0</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+			<PurchaseOrderLine>
+				<OrderLineNumber>5</OrderLineNumber>
+				<ArticleNumber>17111</ArticleNumber>
+				<SupplierArticleNumber/>
+				<ArticleDescription>0.1 Cable</ArticleDescription>
+				<CategoryNumber>CAT1000</CategoryNumber>
+				<CategoryDescription>Speakers and stuff</CategoryDescription>
+				<Quantity>1.0</Quantity>
+				<Unit>ea</Unit>
+				<UnitPrice>59.99</UnitPrice>
+				<RowTotalAmountVatExcluded>144000.0</RowTotalAmountVatExcluded>
+				<StatusText>Received</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>1.0</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+		</Lines>
+		<SupplierName>Contoso Asia</SupplierName>
+	</PurchaseOrder>
+	<PurchaseOrder>
+		<OrderNumber>000013</OrderNumber>
+		<SupplierNumber>JP-001</SupplierNumber>
+		<CurrencyCode>USD</CurrencyCode>
+		<DateCreated>2022-04-28T22:29:53</DateCreated>
+		<ContactName/>
+		<Description>Some other text</Description>
+		<StatusText>Open</StatusText>
+		<Lines>
+			<PurchaseOrderLine>
+				<OrderLineNumber>10</OrderLineNumber>
+				<ArticleNumber>M0018</ArticleNumber>
+				<SupplierArticleNumber/>
+				<ArticleDescription>Polyol</ArticleDescription>
+				<CategoryNumber/>
+				<CategoryDescription/>
+				<Quantity>2246.25</Quantity>
+				<Unit>lb</Unit>
+				<UnitPrice>10.0</UnitPrice>
+				<RowTotalAmountVatExcluded>22462.50</RowTotalAmountVatExcluded>
+				<StatusText>Received</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>2246.25</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+			<PurchaseOrderLine>
+				<OrderLineNumber>20</OrderLineNumber>
+				<ArticleNumber>M0018</ArticleNumber>
+				<SupplierArticleNumber/>
+				<ArticleDescription>Polyol</ArticleDescription>
+				<CategoryNumber/>
+				<CategoryDescription/>
+				<Quantity>4.4</Quantity>
+				<Unit>lb</Unit>
+				<UnitPrice>10.0</UnitPrice>
+				<RowTotalAmountVatExcluded>44.0</RowTotalAmountVatExcluded>
+				<StatusText>Open</StatusText>
+				<InvoicedQuantity>0</InvoicedQuantity>
+				<DeliveredQuantity>0</DeliveredQuantity>
+				<IsDeliveryRequired>false</IsDeliveryRequired>
+				<PriceUnit>1.0</PriceUnit>
+			</PurchaseOrderLine>
+		</Lines>
+		<SupplierName>Contoso Chemicals Japan</SupplierName>
+	</PurchaseOrder>
+	<PurchaseOrder>
+		<OrderNumber>000035</OrderNumber>
+		<SupplierNumber>US-111</SupplierNumber>
+		<CurrencyCode>USD</CurrencyCode>
+		<DateCreated>2022-04-28T22:29:53</DateCreated>
+		<ContactName>CHARLIE</ContactName>
+		<Description>More text</Description>
+		<StatusText>Open</StatusText>
+		<Lines>
+			<PurchaseOrderLine>
+				<OrderLineNumber>10</OrderLineNumber>
+				<ArticleNumber>T222333</ArticleNumber>
+				<SupplierArticleNumber>004522604</SupplierArticleNumber>
+				<ArticleDescription>PLL1910M 19in 1280x1024 DVI VGA LED Monitor w Integrated Sp</ArticleDescription>
+				<CategoryNumber>44110000</CategoryNumber>
+				<CategoryDescription>OFFICE AND DESK ACCESSORIES</CategoryDescription>
+				<Quantity>100.0</Quantity>
+				<Unit>ea</Unit>
+				<UnitPrice>199.0</UnitPrice>
+				<RowTotalAmountVatExcluded>19900.0</RowTotalAmountVatExcluded>
+				<StatusText>Open</StatusText>
+				<InvoicedQuantity>40.0</InvoicedQuantity>
+				<DeliveredQuantity>0</DeliveredQuantity>
+				<IsDeliveryRequired>true</IsDeliveryRequired>
+				<PriceUnit>1</PriceUnit>
+			</PurchaseOrderLine>
+		</Lines>
+		<SupplierName>Contoso Office Supply</SupplierName>
+	</PurchaseOrder>
+</PurchaseOrders>

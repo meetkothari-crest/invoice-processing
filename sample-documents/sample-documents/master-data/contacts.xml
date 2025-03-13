@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<MasterDataObjects xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<MasterDataObject>
+<Value>Ben Martin</Value>
+<Name>Confirmation Control</Name>
+<Description>Invoices are confirmed by Ben Martin upon arrival.</Description>
+<Active>true</Active>
+</MasterDataObject>
+<MasterDataObject>
+<Value>Jennifer Smith</Value>
+<Name>Accounting</Name>
+<Description>Accounting is performed by Jennifer Smith.</Description>
+<Active>true</Active>
+</MasterDataObject>
+<MasterDataObject>
+<Value>Henry Rearden</Value>
+<Name>Approval</Name>
+<Description>Henry Rearden performs approval.</Description>
+<Active>true</Active>
+</MasterDataObject>
+</MasterDataObjects>

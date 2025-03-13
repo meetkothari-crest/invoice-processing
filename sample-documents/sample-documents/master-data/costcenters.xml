@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CostCenters>
+	<CostCenter>
+      <Code>1111</Code>
+      <Name>Research and Development</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1112</Code>
+      <Name>Marketing</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1113</Code>
+      <Name>Sales</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1044</Code>
+      <Name>Chairman of the Board</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1046</Code>
+      <Name>Comptroller General</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1062</Code>
+      <Name>SLE</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1107</Code>
+      <Name>QAQC</Name>
+      <Active>true</Active>
+   </CostCenter>
+   <CostCenter>
+      <Code>1110</Code>
+      <Name>Secretary General</Name>
+      <Active>true</Active>
+   </CostCenter>  
+</CostCenters>  
